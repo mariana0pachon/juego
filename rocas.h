@@ -5,9 +5,11 @@
 
 MFRC522 rfid(pinSSRocas, pinRSTRocas);
 
-String ID_nivel1 = "16622018095";
-String ID_nivel2 = "152188223110";
+// String ID_nivel1 = "16622018095";
+String ID_nivel1 = "152188223110"; // caracol 1
+String ID_nivel2 = "16622018095"; // caracol 2
 String ID_nivel3 = "152163211110";
+
 
 #ifndef rocas_h
 #define rocas_h
@@ -30,6 +32,8 @@ public:
         for (int i = 0; i < rfid.uid.size; i++) {
           uidString += rfid.uid.uidByte[i];
         }
+
+        Serial.println(uidString);
 
         if (nuevoNivel == 1 && uidString == ID_nivel1) {
           empezarNivel(1);

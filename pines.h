@@ -8,10 +8,10 @@ int pinRSTRocas = 5;
 int pinLedsRocas_n1 = 3;
 int pinLedsRocas_n2 = 4;
 
-int pinInstruccion1 = A1;
-int pinInstruccion2 = A2;
-int pinInstruccion3 = A3;
-int pinInstruccion4 = A4;
+int pinInst1 = A1;
+int pinInst2 = A2;
+int pinInst3 = A3;
+int pinInst4 = A4;
 
 // int floresSubenMotorPin1 = 6;
 // int floresSubenMotorPin2 = 2;
