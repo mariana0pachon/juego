@@ -3,11 +3,11 @@
 #include "pines.h"
 #include "rio.h"
 #include "rocas.h"
-#include "instrucciones.h"
+// #include "instrucciones.h"
 
 Rio rio;
 Rocas rocas;
-Instrucciones instrucciones;
+// Instrucciones instrucciones;
 
 int humedadAnterior;
 
@@ -16,13 +16,13 @@ void setup() {
 
   rio.setup();
   rocas.setup();
-  instrucciones.setup();
+  // instrucciones.setup();
 
   humedadAnterior = analogRead(pinSensorRio_n1);
   Serial.print("humedadAnterior: ");
   Serial.println(humedadAnterior);
 
-  instrucciones.darInstruccion(1);
+  // instrucciones.darInstruccion(1);
 }
 
 void loop() {
@@ -38,12 +38,12 @@ void loop() {
   }
 
   if (rio.nivelTerminado(1)) {
-    instrucciones.darInstruccion(2);
+    // instrucciones.darInstruccion(2);
     rocas.desbloquear(1);
   }
 
   if (rocas.nivelTerminado(1)) {
-    instrucciones.darInstruccion(3);
+    // instrucciones.darInstruccion(3);
 
     rio.desbloquear(2);
     // TODO: empezar nivel de flores que suben 2
